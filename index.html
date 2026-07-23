@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skeena — Indonesia's Complete Wedding Preparation Ecosystem</title>
+    <meta name="description" content="Skeena is Indonesia's all-in-one wedding ecosystem: pre-marriage courses, wedding planning tools, digital & printed invitations, wedding merchandise, wedding books, and couple art — everything you need for your journey to marriage.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://skeena.id/">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Skeena">
+    <meta property="og:title" content="Skeena — Indonesia's Complete Wedding Preparation Ecosystem">
+    <meta property="og:description" content="Pre-marriage courses, wedding planning, invitations, merchandise, wedding books, and couple art — one ecosystem for your entire wedding journey.">
+    <meta property="og:url" content="https://skeena.id/">
+    <meta property="og:image" content="https://i.ibb.co.com/PvgDnt0Q/v2.jpg">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Skeena — Indonesia's Complete Wedding Preparation Ecosystem">
+    <meta name="twitter:description" content="Pre-marriage courses, wedding planning, invitations, merchandise, wedding books, and couple art — one ecosystem for your entire wedding journey.">
+    <meta name="twitter:image" content="https://i.ibb.co.com/PvgDnt0Q/v2.jpg">
+
+    <meta name="theme-color" content="#173526">
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Skeena",
+        "url": "https://skeena.id/",
+        "logo": "https://i.ibb.co.com/PvgDnt0Q/v2.jpg",
+        "description": "Skeena is Indonesia's all-in-one wedding ecosystem covering pre-marriage courses, wedding planning, invitations, merchandise, wedding books, and couple art.",
+        "sameAs": [
+            "https://instagram.com/skeena.id",
+            "https://tiktok.com/@skeena.id",
+            "https://linkedin.com/company/skeena-id"
+        ]
+    }
+    </script>
+
+    <style>
+        /* ========================================
+           RESET & BASE
+           ======================================== */
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        body {
+            font-family: 'Darker Grotesque', 'Helvetica Neue', sans-serif;
+            background-color: #ffffff;
+            color: #232323;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+
+        /* ========================================
+           PAGE WRAPPER — Full green/landscape bg
+           ======================================== */
+        .page-wrapper {
+            height: 100vh;
+            overflow: hidden;
+            background:
+                linear-gradient(
+                    180deg,
+                    rgba(23, 53, 38, 0.60) 0%,
+                    rgba(15, 36, 25, 0.88) 40%,
+                    rgba(10, 24, 16, 0.96) 100%
+                ),
+                url('https://cdn.pixabay.com/photo/2018/01/12/14/24/night-3078326_1280.jpg');
+            background-size: cover;
+            background-position: center top;
+            background-repeat: no-repeat;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        /* Semantic wrapper only — keeps hero/panel/social as direct
+           flex items of .page-wrapper so spacing is unchanged */
+        .content-main {
+            display: contents;
+        }
+
+        /* ========================================
+           HEADER
+           ======================================== */
+        .site-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 16px 32px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .logo {
+            font-family: 'Darker Grotesque', sans-serif;
+            font-size: 20px;
+            font-weight: 700;
+            color: #F7F7F7;
+            letter-spacing: -0.5px;
+            transition: opacity 0.2s ease;
+        }
+
+        .logo:hover {
+            opacity: 0.75;
+        }
+
+        .header-tag {
+            font-family: 'DM Mono', monospace;
+            font-size: 11px;
+            font-weight: 400;
+            color: rgba(247, 247, 247, 0.5);
+            letter-spacing: 0.5px;
+        }
+
+        /* ========================================
+           HERO
+           ======================================== */
+        .hero {
+            text-align: center;
+            padding: 8px 32px 12px;
+            position: relative;
+            z-index: 5;
+        }
+
+        .hero-title {
+            font-family: 'Darker Grotesque', sans-serif;
+            font-size: 42px;
+            font-weight: 600;
+            color: #F7F7F7;
+            line-height: 1.1;
+            letter-spacing: -1.5px;
+            margin-bottom: 8px;
+        }
+
+        .hero-sub {
+            font-family: 'Darker Grotesque', sans-serif;
+            font-size: 16px;
+            font-weight: 400;
+            color: rgba(247, 247, 247, 0.65);
+            line-height: 1.4;
+        }
+
+        .hero-location {
+            font-family: 'DM Mono', monospace;
+            font-size: 11px;
+            font-weight: 400;
+            color: rgba(247, 247, 247, 0.35);
+            letter-spacing: 1.5px;
+            margin-top: 5px;
+        }
+
+        /* ========================================
+           PANEL CARD
+           ======================================== */
+        .panel-section {
+            display: flex;
+            justify-content: center;
+            padding: 4px 32px 32px;
+            position: relative;
+            z-index: 5;
+        }
+
+        .panel-card {
+            background: rgba(15, 36, 25, 0.55);
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
+            border-radius: 48px;
+            padding: 28px 32px;
+            max-width: 640px;
+            width: 100%;
+            box-shadow:
+                0 8px 48px rgba(23, 53, 38, 0.40),
+                0 2px 16px rgba(131, 154, 86, 0.10);
+            border: 1px solid rgba(131, 154, 86, 0.10);
+        }
+
+        .panel-description {
+            font-family: 'DM Mono', monospace;
+            font-size: 10px;
+            font-weight: 400;
+            color: rgba(247, 247, 247, 0.82);
+            line-height: 1.55;
+            letter-spacing: 0px;
+        }
+
+        .panel-divider {
+            border: none;
+            height: 1px;
+            background: rgba(247, 247, 247, 0.08);
+            margin: 14px 0;
+        }
+
+        /* ========================================
+           MENU LIST
+           ======================================== */
+        .menu-list {
+            list-style: none;
+        }
+
+        .menu-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 8px 0;
+            border-bottom: 1px solid rgba(247, 247, 247, 0.05);
+            transition: color 0.2s ease;
+            text-decoration: none;
+            color: inherit;
+            cursor: pointer;
+        }
+
+        .menu-item:first-child {
+            padding-top: 0;
+        }
+
+        .menu-item:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .menu-item:hover .menu-text {
+            color: #839A56;
+        }
+
+        .menu-item:hover .menu-arrow {
+            color: #839A56;
+            transform: translateX(4px);
+        }
+
+        .menu-label {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .menu-number {
+            font-family: 'DM Mono', monospace;
+            font-size: 12px;
+            font-weight: 400;
+            color: rgba(247, 247, 247, 0.28);
+            min-width: 24px;
+            transition: color 0.2s ease;
+        }
+
+        .menu-item:hover .menu-number {
+            color: rgba(131, 154, 86, 0.5);
+        }
+
+        .menu-text {
+            font-family: 'Darker Grotesque', sans-serif;
+            font-size: 18px;
+            font-weight: 700;
+            color: #F7F7F7;
+            transition: color 0.2s ease;
+        }
+
+        .menu-arrow {
+            color: rgba(247, 247, 247, 0.45);
+            transition: all 0.2s ease;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .menu-arrow svg {
+            width: 18px;
+            height: 18px;
+        }
+
+        /* ========================================
+           PANEL FOOTER (inside card)
+           ======================================== */
+        .panel-footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-family: 'DM Mono', monospace;
+            font-size: 9px;
+            font-weight: 400;
+            color: rgba(247, 247, 247, 0.22);
+            letter-spacing: 0.3px;
+        }
+
+        /* ========================================
+           SOCIAL ICONS
+           ======================================== */
+        .social-section {
+            display: flex;
+            justify-content: center;
+            padding: 0 32px 16px;
+            position: relative;
+            z-index: 5;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            background: #ffffff;
+            border: 2px solid #ffffff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .social-icon:hover {
+            background: transparent;
+            border-color: rgba(247, 247, 247, 0.5);
+        }
+
+        .social-icon:hover svg {
+            color: #F7F7F7;
+        }
+
+        .social-icon svg {
+            width: 18px;
+            height: 18px;
+            color: #232323;
+            transition: color 0.3s ease;
+        }
+
+        /* ========================================
+           SITE FOOTER
+           ======================================== */
+        .site-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            gap: 24px;
+            padding: 0 32px 20px;
+            position: relative;
+            z-index: 5;
+        }
+
+        .footer-tagline {
+            font-family: 'DM Mono', monospace;
+            font-size: 9px;
+            font-weight: 400;
+            color: rgba(247, 247, 247, 0.38);
+            line-height: 1.5;
+            margin: 0;
+            max-width: 420px;
+            text-align: left;
+        }
+
+        .footer-copyright {
+            font-family: 'DM Mono', monospace;
+            font-size: 9px;
+            font-weight: 400;
+            color: rgba(247, 247, 247, 0.2);
+            letter-spacing: 0.5px;
+            margin: 0;
+            white-space: nowrap;
+            text-align: right;
+        }
+
+        /* ========================================
+           RESPONSIVE — MOBILE (≤767px)
+           ======================================== */
+        @media (max-width: 767px) {
+            .site-header {
+                padding: 12px 16px;
+            }
+
+            .logo {
+                font-size: 18px;
+            }
+
+            .header-tag {
+                font-size: 9px;
+            }
+
+            .hero {
+                padding: 6px 20px 8px;
+            }
+
+            .hero-title {
+                font-size: 30px;
+                letter-spacing: -1px;
+                margin-bottom: 6px;
+            }
+
+            .hero-sub {
+                font-size: 14px;
+            }
+
+            .hero-location {
+                font-size: 10px;
+                margin-top: 4px;
+            }
+
+            .panel-section {
+                padding: 2px 16px 20px;
+            }
+
+            .panel-card {
+                border-radius: 28px;
+                padding: 18px;
+            }
+
+            .panel-description {
+                font-size: 9px;
+                line-height: 1.45;
+            }
+
+            .panel-divider {
+                margin: 10px 0;
+            }
+
+            .menu-item {
+                padding: 6px 0;
+            }
+
+            .menu-text {
+                font-size: 15px;
+                font-weight: 700;
+            }
+
+            .menu-label {
+                gap: 10px;
+            }
+
+            .panel-footer {
+                font-size: 8px;
+            }
+
+            .social-section {
+                padding: 0 16px 10px;
+            }
+
+            .social-icons {
+                gap: 8px;
+            }
+
+            .social-icon {
+                width: 34px;
+                height: 34px;
+            }
+
+            .social-icon svg {
+                width: 15px;
+                height: 15px;
+            }
+
+            .site-footer {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 6px;
+                padding: 0 16px 12px;
+            }
+
+            .footer-tagline {
+                font-size: 8px;
+                line-height: 1.45;
+                max-width: 100%;
+            }
+
+            .footer-copyright {
+                font-size: 8px;
+            }
+        }
+
+        /* ========================================
+           RESPONSIVE — TABLET (768–1023px)
+           ======================================== */
+        @media (min-width: 768px) and (max-width: 1023px) {
+            .panel-card {
+                max-width: 560px;
+                padding: 32px;
+            }
+
+            .hero-title {
+                font-size: 42px;
+            }
+        }
+
+        /* ========================================
+           RESPONSIVE — LARGE DESKTOP (1400px+)
+           ======================================== */
+        @media (min-width: 1400px) {
+            .panel-card {
+                max-width: 640px;
+            }
+
+            .hero-title {
+                font-size: 56px;
+            }
+        }
+
+        /* ========================================
+           SUBTLE FADE-IN ON LOAD
+           ======================================== */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(16px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero {
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .panel-section {
+            animation: fadeInUp 0.8s ease-out 0.15s both;
+        }
+
+        .social-section {
+            animation: fadeInUp 0.8s ease-out 0.3s both;
+        }
+
+        .site-footer {
+            animation: fadeInUp 0.8s ease-out 0.4s both;
+        }
+    </style>
+</head>
+<body>
+    <div class="page-wrapper">
+
+        <!-- ====== HEADER ====== -->
+        <header class="site-header">
+            <a href="/" class="logo">skeena</a>
+            <span class="header-tag">Wedding Essential.</span>
+        </header>
+
+        <!-- ====== MAIN CONTENT ====== -->
+        <main class="content-main">
+
+        <!-- ====== HERO ====== -->
+        <section class="hero">
+            <h1 class="hero-title">Skeena.</h1>
+            <p class="hero-sub">Stand For Your Complete Wedding Journey.</p>
+            <p class="sr-only">Skeena is Indonesia's complete wedding preparation ecosystem, covering pre-marriage courses, wedding planning, digital and printed invitations, wedding merchandise, wedding books, and couple art.</p>
+        </section>
+
+        <!-- ====== MAIN PANEL CARD ====== -->
+        <section class="panel-section">
+            <div class="panel-card">
+                <p class="panel-description">
+                    SKEENA isn't just a platform. We believe the journey toward marriage should be peaceful and well-prepared — from heart-readiness to event planning and every little detail that binds your story. Get to know our ecosystem better:
+                </p>
+
+                <hr class="panel-divider">
+
+                <nav aria-label="Skeena ecosystem">
+                <ul class="menu-list">
+                    <li>
+                        <a href="https://bimwin.skeena.id" class="menu-item">
+                            <span class="menu-label">
+                                <span class="menu-number">01</span>
+                                <span class="menu-text">Marriage Preparation Course</span>
+                            </span>
+                            <span class="menu-arrow">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://wedplan.skeena.id" class="menu-item">
+                            <span class="menu-label">
+                                <span class="menu-number">02</span>
+                                <span class="menu-text">Wedding Planner</span>
+                            </span>
+                            <span class="menu-arrow">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://invitation.skeena.id" class="menu-item">
+                            <span class="menu-label">
+                                <span class="menu-number">03</span>
+                                <span class="menu-text">Wedding Invitation</span>
+                            </span>
+                            <span class="menu-arrow">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://merch.skeena.id" class="menu-item">
+                            <span class="menu-label">
+                                <span class="menu-number">04</span>
+                                <span class="menu-text">Wedding Merchandise</span>
+                            </span>
+                            <span class="menu-arrow">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://book.skeena.id" class="menu-item">
+                            <span class="menu-label">
+                                <span class="menu-number">05</span>
+                                <span class="menu-text">Wedding Book</span>
+                            </span>
+                            <span class="menu-arrow">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://art.skeena.id" class="menu-item">
+                            <span class="menu-label">
+                                <span class="menu-number">06</span>
+                                <span class="menu-text">Couple Art</span>
+                            </span>
+                            <span class="menu-arrow">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#about" class="menu-item">
+                            <span class="menu-label">
+                                <span class="menu-number">07</span>
+                                <span class="menu-text">About Us</span>
+                            </span>
+                            <span class="menu-arrow">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+                </nav>
+
+                <hr class="panel-divider">
+
+                <div class="panel-footer">
+                    <span>All Rights Reserved to Skeena.id</span>
+                    <span>2026 ©</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ====== SOCIAL ICONS ====== -->
+        <section class="social-section">
+            <div class="social-icons">
+                <!-- Instagram -->
+                <a href="#" class="social-icon" aria-label="Instagram" target="_blank" rel="noopener">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+                </a>
+                <!-- Threads -->
+                <a href="#" class="social-icon" aria-label="Threads" target="_blank" rel="noopener">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 192" fill="currentColor"><path d="M141.537 88.988a67 67 0 0 0-2.518-1.143c-1.482-27.307-16.403-42.94-41.457-43.1h-.34c-14.986 0-27.449 6.396-35.12 18.036l13.779 9.452c5.73-8.695 14.724-10.548 21.348-10.548h.229c8.249.053 14.474 2.452 18.503 7.129 2.932 3.405 4.893 8.111 5.864 14.05-7.314-1.243-15.224-1.626-23.68-1.14-23.82 1.371-39.134 15.264-38.105 34.568.522 9.792 5.4 18.216 13.735 23.719 7.047 4.652 16.124 6.927 25.557 6.412 12.458-.683 22.231-5.436 29.049-14.127 5.178-6.6 8.453-15.153 9.899-25.93 5.937 3.583 10.337 8.298 12.767 13.966 4.132 9.635 4.373 25.468-8.546 38.376-11.319 11.308-24.925 16.2-45.488 16.351-22.809-.169-40.06-7.484-51.286-21.742-10.516-13.363-15.947-32.636-16.148-57.281.201-24.645 5.632-43.918 16.148-57.281 11.226-14.258 28.477-21.573 51.286-21.742 22.975.17 40.526 7.52 52.16 21.845 5.703 7.021 10.001 15.85 12.833 26.045l16.834-4.49c-3.431-12.65-8.827-23.542-16.128-32.53-14.998-18.464-36.928-27.926-65.198-28.129h-.114c-28.212.202-49.897 9.7-64.463 28.23C22.226 39.34 15.24 61.657 15.01 90.019l-.001.096.001.096c.23 28.362 7.216 50.679 20.767 66.34 14.566 18.53 36.251 28.028 64.463 28.23h.114c24.965-.18 42.557-6.703 57.043-21.157 18.928-18.89 18.362-42.556 12.128-57.107-4.478-10.44-13.011-18.912-24.978-24.53Zm-42.16 39.1c-10.44.588-21.297-4.098-21.826-14.13-.393-7.436 5.271-15.732 22.457-16.723 1.966-.113 3.895-.169 5.788-.169 6.229 0 12.058.605 17.356 1.766-1.978 24.702-13.58 28.633-23.775 29.256Z"/></svg>
+                </a>
+                <!-- YouTube -->
+                <a href="#" class="social-icon" aria-label="YouTube" target="_blank" rel="noopener">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><path d="m10 15 5-3-5-3z"/></svg>
+                </a>
+                <!-- WhatsApp -->
+                <a href="#" class="social-icon" aria-label="WhatsApp" target="_blank" rel="noopener">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+                </a>
+                <!-- TikTok -->
+                <a href="#" class="social-icon" aria-label="TikTok" target="_blank" rel="noopener">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1v-3.5a6.37 6.37 0 0 0-.79-.05A6.34 6.34 0 0 0 3.15 15.2a6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.34-6.34V8.73a8.19 8.19 0 0 0 4.76 1.52v-3.4a4.85 4.85 0 0 1-1-.16z"/></svg>
+                </a>
+                <!-- LinkedIn -->
+                <a href="#" class="social-icon" aria-label="LinkedIn" target="_blank" rel="noopener">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+                </a>
+            </div>
+        </section>
+
+        </main>
+
+        <!-- ====== SITE FOOTER ====== -->
+        <footer class="site-footer">
+            <p class="footer-tagline">
+                {From preparation to celebration, we walk with you.}
+            </p>
+            <p class="footer-copyright">2026 © All rights reserved to Skeena.id</p>
+        </footer>
+
+    </div>
+</body>
+</html>

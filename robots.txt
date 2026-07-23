@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://skeena.id/sitemap.xml
